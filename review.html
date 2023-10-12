@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- These are icon links -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/solid.css">
+    <!-- These are icon links -->
+    <link rel="stylesheet" href="bootstrapcss.css">
+    <title>Customer Reviews</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Focus Frenzy</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>Home</a></li>
+                <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="Login.html"><i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center">Customer Reviews</h2>
+
+        <!-- Display existing reviews here (if any) -->
+
+        <div class="well well-lg">
+            <h4>Submit Your Review</h4>
+            <form action="submit_review.php" method="POST">
+                <div class="form-group">
+                    <label for="author">Your Name:</label>
+                    <input type="text" class="form-control" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="review">Your Review:</label>
+                    <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p>&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
+    </footer>
+</body>
+
+</html>

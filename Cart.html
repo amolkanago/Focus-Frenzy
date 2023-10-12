@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="cart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/solid.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrapcss.css">
+</head>
+
+<body onload="doShowAll()">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Focus Frenzy</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Cart.html"><i class="fas fa-cart-shopping nav-icon"></i>Cart</a></li>
+                    <li><a href="Settings.html"><i class="fas fa-gear nav-icon"></i>Settings</a></li>
+                    <li><a href="Login.html"><i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container foot">
+        <table id="list">
+            <tbody>
+                <tr>
+                    <th>Item Number</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>Rs.0/-</td>
+                    <td><a href="Success.html" class="btn btn-primary">Confirm Order</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
+        </div>
+    </footer>
+</body>
+
+</html>

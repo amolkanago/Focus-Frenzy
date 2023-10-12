@@ -1,0 +1,401 @@
+/* Old CSS */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Mulish:wght@300&family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap');
+
+
+* {
+    font-family: 'Jost',
+        sans-serif;
+    font-family: 'Kaisei Tokumin',
+        serif;
+    font-family: 'Lato',
+        sans-serif;
+    font-family: 'Poppins',
+        sans-serif;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+:root {
+    --bs-dark-color: #1a1d20;
+    --bs-dark-primary: #1c1c1c;
+    --bs-main-color: #fff;
+    --bs-primary-color: #c6c6c6;
+    --secondary-color: #29a9fd;
+    --bs-supporting-color: #C850C0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font: 'Lexend Deca', sans-serif;
+    color: var(--bs-dark-color);
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    line-height: 3rem;
+    font-weight: 600;
+    font-size: 3.4rem;
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--bs-main-color);
+    letter-spacing: 0.07rem;
+    line-height: 1.55rem;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-color);
+    /* Change this color to your preferred hover color */
+    transition: color 0.3s ease;
+    /* Add a smooth color transition on hover */
+}
+
+button a {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.03rem;
+    word-spacing: .1rem;
+}
+
+.common-heading {
+    font-size: 1.15rem !important;
+    font-weight: 500;
+    letter-spacing: 0.01rem !important;
+}
+
+.section-title {
+    margin-bottom: 4.2rem;
+}
+
+.common-title {
+    margin-bottom: 4.2rem;
+}
+
+/* navbar style */
+.nav-link {
+    color: var(--bs-main-color) !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+
+
+/* hero section start */
+.icon-with-margin{
+    margin-right: 20px;
+}
+
+.hero-section .container {
+    display: grid;
+    place-content: center;
+    height: inherit;
+}
+
+.bg-main {
+    height: 80vh;
+    position: relative;
+}
+
+.bg-color {
+    background-color: var(--bs-dark-primary);
+}
+
+.text-light-grey {
+    color: var(--bs-main-color);
+}
+
+/* .bg-theme{
+    color: var(--bs-supporting-color);
+    background-image: none !important;
+} */
+
+.container {
+    flex: 1;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.hero-video--section {
+    max-width: 100%;
+    width: 70%;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.nav-icon{
+    margin-right: 5px;
+}
+
+.custom-shape-divider-bottom-1696657756 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696657756 svg {
+    position: relative;
+    display: block !important;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1696657756 .shape-fill {
+    fill: var(--bs-main-color);
+}
+
+.product-showcase {
+    background-color: darkslategrey;
+    /* Add this line to set the background color to white */
+    padding: 6rem 0 3rem 0 !important;
+    /* Add padding as needed */
+}
+
+.product {
+    margin-bottom: 30px;
+}
+
+
+
+.product-image {
+    height: auto;
+    width: 12rem;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    align-self: center;
+}
+.btn-primary:focus {
+    outline: none;
+}
+
+.btn-primary:hower {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary :hover {
+    background-color: #0056b3;
+}
+
+/* Style for product image hover effect */
+.product-image:hover {
+    transform: scale(1.05);
+    /* Scale up the image on hover */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect */
+    /* Add other hover effects as needed */
+}
+
+@media (max-width: 768px) {
+    .product {
+        margin-bottom: 20px;
+    }
+}
+
+/* Features Section */
+.features {
+    background-color: var(--bs-dark-primary);
+    padding: 4rem 0;
+}
+
+.section-title {
+    color: var(--bs-main-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.feature {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    color: var(--bs-main-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: var(--bs-primary-color);
+    font-size: 1rem;
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: var(--bs-main-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* Override text color for section title within the .reviews section */
+.reviews .section-title {
+    color: #000;
+    /* Set your desired text color here */
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.review {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.review-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    font-size: 1.5rem;
+    color: var(--bs-dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: var(--bs-dark-primary);
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--bs-dark-primary);
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--bs-main-color);
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.contact .contact-description {
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form .form-input,
+.contact-form .form-textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.contact-form .form-input {
+    height: 50px;
+}
+
+.contact-form .form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--bs-main-color);
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--bs-dark-primary);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .footer-text {
+    color: var(--bs-main-color);
+    font-size: 1rem;
+}
