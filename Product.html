@@ -3,176 +3,252 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="cart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta name="description"
+        content="Explore our premium camera collection at Focus Frenzy - Your ultimate destination for photography equipment">
+    <title>Products - Focus Frenzy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/solid.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/bootstrapcss.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse py-5 pt-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">Focus Frenzy</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html"><i class="fas fa-home nav-icon"></i>Home</a></li>
-                    <li><a href="Cart.html"><i class="fas fa-cart-shopping nav-icon"></i>Cart</a></li>
-                    <li><a href="Settings.html"><i class="fas fa-gear nav-icon"></i>Settings</a></li>
-                    <li><a href="Login.html"><i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Logout</a></li>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- <img src="images/logo.png" alt="Focus Frenzy Logo" width="30" height="30" class="me-2"> -->
+                Focus Frenzy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-cart-shopping nav-icon" aria-hidden="true"></i>
+                            <span>Cart</span>
+                            <span class="badge bg-primary cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Settings.html">
+                            <i class="fas fa-gear nav-icon" aria-hidden="true"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon" aria-hidden="true"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Welcome to our Focus Frenzy!</h1>
-            <p>At Focus Frenzy, we're passionate about photography. 
-                Our collection of top-notch cameras is designed to 
-                capture life's most memorable moments with precision and style.
-            </p>
+
+    <div class="container py-5">
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">Welcome to Focus Frenzy!</h1>
+            <p class="lead">At Focus Frenzy, we're passionate about photography. Our collection of top-notch cameras is
+                designed to capture life's most memorable moments with precision and style.</p>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic1.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Cannon EOS</h3>
-                    <p>Price: Rs. 36,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+        <div class="row g-4 mt-4">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic1.png" class="card-img-top p-3" alt="Cannon EOS Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Cannon EOS</h5>
+                        <p class="card-text">₹36,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="1">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic2.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Sony Alpha ILCE 6100L</h3>
-                    <p>Price: Rs. 40,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic2.png" class="card-img-top p-3" alt="Sony Alpha Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Sony Alpha ILCE 6100L</h5>
+                        <p class="card-text">₹40,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="2">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic3.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Nikon Z50</h3>
-                    <p>Price: Rs. 50,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic3.png" class="card-img-top p-3" alt="Nikon Z50 Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Nikon Z50</h5>
+                        <p class="card-text">₹50,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="3">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic4.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Olympus OMD-EM-5-Mark-III </h3>
-                    <p>Price: Rs. 50,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic4.png" class="card-img-top p-3" alt="Olympus Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Olympus OMD-EM-5-Mark-III</h5>
+                        <p class="card-text">₹50,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="4">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic5.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Fujifilm X-H2</h3>
-                    <p>Price: Rs. 1,06,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic5.png" class="card-img-top p-3" alt="Fujifilm Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Fujifilm X-H2</h5>
+                        <p class="card-text">₹1,06,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="5">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic6.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Panasonic DMC-G85H</h3>
-                    <p>Price: Rs. 40,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic6.png" class="card-img-top p-3" alt="Panasonic Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Panasonic DMC-G85H</h5>
+                        <p class="card-text">₹40,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="6">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic7.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Canon PowerShot SX740</h3>
-                    <p>Price: Rs. 85,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 7 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic7.png" class="card-img-top p-3" alt="Canon PowerShot Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Canon PowerShot SX740</h5>
+                        <p class="card-text">₹85,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="7">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic8.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Olympus Tough TG-6 </h3>
-                    <p>Price: Rs. 55,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 8 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic8.png" class="card-img-top p-3" alt="Olympus Tough Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Olympus Tough TG-6</h5>
+                        <p class="card-text">₹55,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="8">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic9.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>NIKON COOLPIX P1000</h3>
-                    <p>Price: Rs. 22,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 9 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic9.png" class="card-img-top p-3" alt="Nikon Coolpix Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">NIKON COOLPIX P1000</h5>
+                        <p class="card-text">₹22,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="9">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic10.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Panasonic HC-V785GW-K Consumer Camcorder</h3>
-                    <p>Price: Rs. 48,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 10 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic10.png" class="card-img-top p-3" alt="Panasonic Camcorder">
+                    <div class="card-body">
+                        <h5 class="card-title">Panasonic HC-V785GW-K</h5>
+                        <p class="card-text">₹48,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="10">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic11.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Canon M50 Mark II</h3>
-                    <p>Price: Rs. 51,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 11 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic11.png" class="card-img-top p-3" alt="Canon M50 Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Canon M50 Mark II</h5>
+                        <p class="card-text">₹51,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="11">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <a><img src="images/pic12.png" alt="Camera"></a>
-                <div class="caption">
-                    <h3>Nikon D6 FX</h3>
-                    <p>Price: Rs. 32,000.00</p>
-                    <button class="btn btn-primary"">Add to cart</button>
+
+            <!-- Product 12 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 product-card">
+                    <img src="images/pic12.png" class="card-img-top p-3" alt="Nikon D6 Camera">
+                    <div class="card-body">
+                        <h5 class="card-title">Nikon D6 FX</h5>
+                        <p class="card-text">₹32,000.00</p>
+                        <button class="btn btn-primary w-100 add-to-cart" data-product-id="12">
+                            <i class="fas fa-cart-plus me-2"></i>Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
-            <p>&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <span id="current-year"></span> Focus Frenzy. All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Contact Us: <a href="tel:+919000000000" class="text-white">+91 90000 00000</a></p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/cart.js" defer></script>
 </body>
 
 </html>

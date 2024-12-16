@@ -2,131 +2,149 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <!-- bootstrap link -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Focus Frenzy - Your ultimate camera destination. Discover premium cameras and photography equipment.">
 
-    <!-- font links -->
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Focus Frenzy - Your ultimate camera destination">
+    <meta property="og:description" content="Discover premium cameras and photography equipment">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://focusfrenzy.com">
+
+    <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&family=Kaisei+Tokumin:wght@400;700;800&family=Lato&family=Poppins:ital,wght@0,300;1,300&family=Roboto:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet">
-    <!-- font links -->
+    <link rel="preload" href="images/hero.mp4" as="video" type="video/mp4">
 
-    <!-- These are icon links -->
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Kaisei+Tokumin:wght@400;700&family=Poppins:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/solid.css">
-    <!-- These are icon links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 
-    <link rel="stylesheet" href="CSS/style.css" />
     <title>Focus Frenzy - Your ultimate camera destination</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-color py-5 pt-lg-5">
+    <!-- Skip Navigation for accessibility -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
+
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg bg-color py-5 pt-lg-5" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Focus Frenzy</a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Focus Frenzy Logo" width="30" height="30">
+                    Focus Frenzy
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">
-                                <i class="fas fa-home nav-icon"></i>Home
+                                <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+                                <span>Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" href="about.html">
-                                <i class="fas fa-info-circle nav-icon"></i>About
+                                <i class="fas fa-info-circle nav-icon" aria-hidden="true"></i>
+                                <span>About</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" href="Product.html">
-                                <i class="fas fa-cubes nav-icon"></i>Products
+                                <i class="fas fa-cubes nav-icon" aria-hidden="true"></i>
+                                <span>Products</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" href="review.html">
-                                <i class="fas fa-star nav-icon"></i>Reviews
+                                <i class="fas fa-star nav-icon" aria-hidden="true"></i>
+                                <span>Reviews</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" href="contact.html">
-                                <i class="fas fa-envelope nav-icon"></i>Contact
+                                <i class="fas fa-envelope nav-icon" aria-hidden="true"></i>
+                                <span>Contact</span>
                             </a>
                         </li>
-                    </ul>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- Hero section start -->
 
-    <section class="bg-main bg-color hero-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
-                    <h1 class="text-capitalize fw-bolder text-white">Welcome to Focus Frenzy</h1>
-                    <p class="mt-3 mb-5 para-width textligth-grey">
-                        Elevate your art with Focus Frenzy, where cameras and creativity
-                        converge. Discover a realm of limitless possibilities in every
-                        frame, from innovation to inspiration.
-                    </p>
-                    <div class="text-center w-100 text-md-start">
-                        <a href="Product.html" class="text-capitalize btn btn-primary custom-button px-5 py-2"
-                            data-bs-toggle="tooltip" data-bs-title="Shop for Cameras">
-                            <i class="fas fa-shopping-cart nav-icon"></i>Shop Now
-                        </a>
+    <main id="main-content" role="main">
+        <section class="bg-main bg-color hero-section" aria-label="Hero section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                        <h1 class="text-capitalize fw-bolder text-white">Welcome to Focus Frenzy</h1>
+                        <p class="mt-3 mb-5 para-width text-light-grey">
+                            Elevate your art with Focus Frenzy, where cameras and creativity converge. Discover a realm
+                            of limitless possibilities in every frame, from innovation to inspiration.
+                        </p>
+                        <div class="text-center w-100 text-md-start">
+                            <a href="Product.html" class="text-capitalize btn btn-primary custom-button px-5 py-2"
+                                data-bs-toggle="tooltip" data-bs-title="Shop for Cameras">
+                                <i class="fas fa-shopping-cart nav-icon" aria-hidden="true"></i>
+                                <span>Shop Now</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!-- hero section image -->
-                <div class="col-12 col-md-12 col-lg-6">
-                    <div class="text-center text-lg-end">
-                        <!-- Use the <img> element to display the GIF image -->
-                        <video src="images/hero.mp4" loop autoplay muted class="hero-video--section">
-                            Your browser does not support the video tag
-                        </video>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="text-center text-lg-end">
+                            <video width="640" height="360" loop autoplay muted loading="lazy"
+                                class="hero-video--section">
+                                <source src="images/hero.mp4" type="video/mp4">
+                                <track kind="captions" src="captions.vtt" label="English captions">
+                                Your browser does not support the video tag
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Hero section ends -->
-
-
-    <!-- About Section End -->
-
-    <!-- Footer Section Start -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p class="footer-text">&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
+            <div class="row">
+                <div class="col-12">
+                    <p class="footer-text">&copy; <span id="current-year"></span> Focus Frenzy. All Rights Reserved |
+                        Contact Us: <a href="tel:+919000000000" class="text-decoration-none">+91 90000 00000</a></p>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- Footer Section End -->
 
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+        </p>
+        <button class="btn btn-primary" onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
-    <script>
-        const tooltipTriggerList = document.querySelectorAll(
-            '[data-bs-toggle="tooltip"]'
-        );
-        const tooltipList = [...tooltipTriggerList].map(
-            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-        );
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

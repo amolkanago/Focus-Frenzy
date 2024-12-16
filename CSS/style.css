@@ -1,20 +1,7 @@
-/* Old CSS */
+/* Core Imports */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Mulish:wght@300&family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap');
 
-
-* {
-    font-family: 'Jost',
-        sans-serif;
-    font-family: 'Kaisei Tokumin',
-        serif;
-    font-family: 'Lato',
-        sans-serif;
-    font-family: 'Poppins',
-        sans-serif;
-    font-family: 'Roboto',
-        sans-serif;
-}
-
+/* Root Variables */
 :root {
     --bs-dark-color: #1a1d20;
     --bs-dark-primary: #1c1c1c;
@@ -24,6 +11,16 @@
     --bs-supporting-color: #C850C0;
 }
 
+/* Base Styles */
+* {
+    font-family: 'Jost', sans-serif;
+    font-family: 'Kaisei Tokumin', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Typography */
 h1,
 h2,
 h3,
@@ -50,7 +47,6 @@ p {
     color: var(--bs-main-color);
     letter-spacing: 0.07rem;
     line-height: 1.55rem;
-
 }
 
 a {
@@ -61,34 +57,18 @@ li {
     list-style: none;
 }
 
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bs-main-color);
+}
+
 .navbar-brand:hover {
     color: var(--secondary-color);
-    /* Change this color to your preferred hover color */
     transition: color 0.3s ease;
-    /* Add a smooth color transition on hover */
 }
 
-button a {
-    font-size: 1.15rem !important;
-    letter-spacing: 0.03rem;
-    word-spacing: .1rem;
-}
-
-.common-heading {
-    font-size: 1.15rem !important;
-    font-weight: 500;
-    letter-spacing: 0.01rem !important;
-}
-
-.section-title {
-    margin-bottom: 4.2rem;
-}
-
-.common-title {
-    margin-bottom: 4.2rem;
-}
-
-/* navbar style */
 .nav-link {
     color: var(--bs-main-color) !important;
     font-weight: bold;
@@ -98,13 +78,12 @@ button a {
     color: var(--secondary-color) !important;
 }
 
-
-
-/* hero section start */
-.icon-with-margin{
-    margin-right: 20px;
+.nav-icon {
+    margin-right: 5px;
+    transition: transform 0.2s ease;
 }
 
+/* Hero Section */
 .hero-section .container {
     display: grid;
     place-content: center;
@@ -124,78 +103,31 @@ button a {
     color: var(--bs-main-color);
 }
 
-/* .bg-theme{
-    color: var(--bs-supporting-color);
-    background-image: none !important;
-} */
-
-.container {
-    flex: 1;
-}
-
-.body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
 .hero-video--section {
     max-width: 100%;
     width: 70%;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
     border-radius: 2rem;
     object-fit: cover;
 }
 
-.nav-icon{
-    margin-right: 5px;
-}
-
-.custom-shape-divider-bottom-1696657756 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1696657756 svg {
-    position: relative;
-    display: block !important;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-bottom-1696657756 .shape-fill {
-    fill: var(--bs-main-color);
-}
-
+/* Product Section */
 .product-showcase {
     background-color: darkslategrey;
-    /* Add this line to set the background color to white */
     padding: 6rem 0 3rem 0 !important;
-    /* Add padding as needed */
 }
 
 .product {
     margin-bottom: 30px;
 }
 
-
-
 .product-image {
     height: auto;
     width: 12rem;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
 }
 
 .product-title {
@@ -209,55 +141,10 @@ button a {
     margin-top: 10px;
 }
 
-.btn-primary {
-    align-self: center;
-}
-.btn-primary:focus {
-    outline: none;
-}
-
-.btn-primary:hower {
-    background-color: blue;
-    cursor: pointer;
-}
-
-.btn-secondary {
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.btn-secondary :hover {
-    background-color: #0056b3;
-}
-
-/* Style for product image hover effect */
-.product-image:hover {
-    transform: scale(1.05);
-    /* Scale up the image on hover */
-    transition: transform 0.3s ease;
-    /* Add a smooth transition effect */
-    /* Add other hover effects as needed */
-}
-
-@media (max-width: 768px) {
-    .product {
-        margin-bottom: 20px;
-    }
-}
-
 /* Features Section */
 .features {
     background-color: var(--bs-dark-primary);
     padding: 4rem 0;
-}
-
-.section-title {
-    color: var(--bs-main-color);
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
 }
 
 .feature {
@@ -290,10 +177,8 @@ button a {
     text-align: center;
 }
 
-/* Override text color for section title within the .reviews section */
 .reviews .section-title {
     color: #000;
-    /* Set your desired text color here */
     font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -336,18 +221,6 @@ button a {
     color: var(--bs-main-color);
 }
 
-.contact .section-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-.contact .contact-description {
-    font-size: 1.25rem;
-    margin-bottom: 4rem;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -364,31 +237,43 @@ button a {
     font-size: 1rem;
 }
 
-.contact-form .form-input {
-    height: 50px;
+/* Cart Specific Styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(41, 169, 253, 0.05);
 }
 
-.contact-form .form-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.contact-form button.btn-primary {
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
     background-color: var(--secondary-color);
-    color: var(--bs-main-color);
-    font-size: 1.25rem;
-    border: none;
-    border-radius: 0.25rem;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.75rem;
 }
 
-.contact-form button.btn-primary:hover {
-    background-color: var(--secondary-color);
+/* Product Cards */
+.thumbnail {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Section */
+.thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail img {
+    max-height: 200px;
+    width: auto;
+}
+
+/* Footer */
 .footer {
     background-color: var(--bs-dark-primary);
     padding: 2rem 0;
@@ -398,4 +283,23 @@ button a {
 .footer .footer-text {
     color: var(--bs-main-color);
     font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-video--section {
+        width: 90%;
+    }
+
+    .product {
+        margin-bottom: 20px;
+    }
 }

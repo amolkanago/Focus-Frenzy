@@ -4,55 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Customer Reviews - Share your experience with Focus Frenzy">
+    <title>Customer Reviews - Focus Frenzy</title>
 
-    <!-- These are icon links -->
+    <!-- Modern Bootstrap and Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/solid.css">
-    <!-- These are icon links -->
-    
-    <link rel="stylesheet" href="CSS/bootstrapcss.css">
-    <title>Customer Reviews</title>
+    <!-- <link rel="stylesheet" href="CSS/bootstrapcss.css"> -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-inverse">
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">Focus Frenzy</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Focus Frenzy Logo" width="30" height="30" class="me-2">
+                Focus Frenzy
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home nav-icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Signup.html">
+                            <i class="fas fa-user-plus nav-icon"></i>Sign Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Login
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>Home</a></li>
-                <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="Login.html"><i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Login</a></li>
-            </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <h2 class="text-center">Customer Reviews</h2>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h4 mb-0">Customer Reviews</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- Sample Reviews -->
+                        <div class="review-list mb-4">
+                            <div class="review-item border-bottom pb-3 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <!-- <img src="images/avatar1.jpg" alt="User Avatar" class="rounded-circle me-2"
+                                        width="40"> -->
+                                    <div>
+                                        <h5 class="mb-0">John Doe</h5>
+                                        <small class="text-muted">Posted on Oct 15, 2023</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <p class="mb-0">Excellent service and amazing product quality! The camera I purchased
+                                    exceeded my expectations.</p>
+                            </div>
+                            <!-- Add more review items as needed -->
+                        </div>
 
-        <!-- Display existing reviews here (if any) -->
-
-        <div class="well well-lg">
-            <h4>Submit Your Review</h4>
-            <form action="submit_review.php" method="POST">
-                <div class="form-group">
-                    <label for="author">Your Name:</label>
-                    <input type="text" class="form-control" id="author" name="author" required>
+                        <!-- Review Form -->
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h4 class="h5 mb-0">Submit Your Review</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="reviewForm" action="submit_review.php" method="POST">
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="author" name="author" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="rating" class="form-label">Rating</label>
+                                        <div class="rating-stars mb-2">
+                                            <i class="far fa-star fs-4 text-warning" data-rating="1"></i>
+                                            <i class="far fa-star fs-4 text-warning" data-rating="2"></i>
+                                            <i class="far fa-star fs-4 text-warning" data-rating="3"></i>
+                                            <i class="far fa-star fs-4 text-warning" data-rating="4"></i>
+                                            <i class="far fa-star fs-4 text-warning" data-rating="5"></i>
+                                        </div>
+                                        <input type="hidden" name="rating" id="rating" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="review" class="form-label">Your Review</label>
+                                        <textarea class="form-control" id="review" name="review" rows="4"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Review
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="review">Your Review:</label>
-                    <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Review</button>
-            </form>
+            </div>
         </div>
     </div>
 
-    <footer class="text-center">
-        <p>&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; <span id="current-year"></span> Focus Frenzy. All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Contact Us: <a href="tel:+919000000000" class="text-white">+91 90000 00000</a></p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Star rating functionality
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function () {
+                const rating = this.dataset.rating;
+                document.getElementById('rating').value = rating;
+
+                document.querySelectorAll('.rating-stars i').forEach(s => {
+                    const sRating = s.dataset.rating;
+                    s.classList.remove('fas', 'far');
+                    s.classList.add(sRating <= rating ? 'fas' : 'far');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
