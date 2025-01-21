@@ -177,9 +177,28 @@ tr:nth-child(even) {
 }
 
 .jumbotron {
-    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    background: linear-gradient(45deg, #ffffff, #e9ecef);
     border: none;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navbar Styles */
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+    color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
 }
 
 @media (max-width: 768px) {

@@ -1,60 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- These are icon links -->
+    <meta name="description" content="Create your Focus Frenzy account">
+    <title>Sign Up - Focus Frenzy</title>
+    
+    <!-- Modern Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/solid.css">
-    <!-- These are icon links -->
-    <link rel="stylesheet" href="CSS/bootstrapcss.css">
+    <!-- <link rel="stylesheet" href="CSS/bootstrapcss.css"> -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
-<body>
-    <nav class="navbar navbar-inverse">
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">Focus Frenzy</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Focus Frenzy Logo" width="30" height="30" class="me-2">
+                Focus Frenzy
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Signup.html">
+                            <i class="fas fa-user-plus nav-icon"></i>Sign Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="fas fa-sign-in-alt nav-icon"></i>Login
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-                <li><a href="Login.html"><i class="fas fa-arrow-up-from-bracket fa-rotate-90 nav-icon"></i>Login</a></li>
-            </ul>
         </div>
     </nav>
-    <div class="container">
-        <form class="col-xs-6 col-xs-offset-3">
-            <h2>SIGN UP</h2>
-            <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input type="tel" class="form-control" name="contact" placeholder="Contact">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="city" placeholder="City">
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" name="address" placeholder="Address"></textarea>
-            </div>
-            <div class="form-group text-center">
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </div>
-        </form>
-    </div>
-    <footer class="text-center">
-        <p>&copy; Copyright Focus Frenzy. All Rights Reserved | Contact Us: +91 90000 00000</p>
-    </footer>
-</body>
 
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-0">Create Your Account</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="signupForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                                        <i class="fas fa-eye" id="toggleIcon"></i>
+                                    </button>
+                                </div>
+                                <div id="passwordStrength" class="form-text"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="contact" class="form-label">Contact Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                    <input type="tel" class="form-control" id="contact" name="contact" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-city"></i></span>
+                                    <input type="text" class="form-control" id="city" name="city" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="address" class="form-label">Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-location-dot"></i></span>
+                                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#" class="text-primary">Terms & Conditions</a>
+                                </label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-user-plus me-2"></i>Create Account
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center py-3">
+                        <p class="mb-0">Already have an account? 
+                            <a href="Login.html" class="text-primary">Login here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; <span id="current-year"></span> Focus Frenzy. All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Contact Us: <a href="tel:+919000000000" class="text-white">+91 90000 00000</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function togglePassword() {
+            const password = document.getElementById('password');
+            const toggleIcon = document.getElementById('toggleIcon');
+            password.type = password.type === 'password' ? 'text' : 'password';
+            toggleIcon.classList.toggle('fa-eye');
+            toggleIcon.classList.toggle('fa-eye-slash');
+        }
+
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strength = document.getElementById('passwordStrength');
+            let strengthValue = 0;
+            
+            strengthValue += /[A-Z]/.test(password) ? 1 : 0;
+            strengthValue += /[a-z]/.test(password) ? 1 : 0;
+            strengthValue += /[0-9]/.test(password) ? 1 : 0;
+            strengthValue += /[^A-Za-z0-9]/.test(password) ? 1 : 0;
+            strengthValue += password.length >= 8 ? 1 : 0;
+
+            const strengthText = ['Very Weak', 'Weak', 'Medium', 'Strong', 'Very Strong'];
+            const strengthClass = ['text-danger', 'text-warning', 'text-info', 'text-primary', 'text-success'];
+            
+            if (password.length > 0) {
+                strength.innerHTML = `<small class="${strengthClass[strengthValue-1]}">
+                    Password Strength: ${strengthText[strengthValue-1]}
+                </small>`;
+            } else {
+                strength.innerHTML = '';
+            }
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                // Add your signup logic here
+                window.location.href = 'Login.html';
+            }
+            this.classList.add('was-validated');
+        });
+    </script>
+</body>
 </html>
